@@ -1,5 +1,8 @@
+# completion for git
 autoload -Uz compinit && compinit
-autoload -U colors && colors
+
+# history command
+HISTFILE="$HOME/.zsh_history"
 
 # Start plugins for zsh
 for plugin ($plugins); do
@@ -16,4 +19,4 @@ done
 unset config_file
 
 # Enable theme
-source $ZSH/themes/$ZSH_THEME.zsh-theme
+source $ZSH/themes/$ZSH_THEME/$ZSH_THEME.zsh-theme
